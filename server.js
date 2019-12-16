@@ -20,8 +20,8 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/assets'));
 
 // CUSTOM MODULES
-require('./app/routing/htmlRoutes')(app);
-require('./app/routing/apiRoutes')(app);
+require('./app/routing/htmlRoutes.js')(app);
+require('./app/routing/apiRoutes.js')(app);
 
 app.listen(PORT, function() {
     console.log("Server has started on PORT " + PORT + ".");

@@ -1,4 +1,4 @@
-const buddyData = require("../data/friends");
+const buddyData = require('../data/friends.js');
 
 module.exports = (app) => {
     app.get("/api/buddies", function (req, res) {
@@ -6,6 +6,7 @@ module.exports = (app) => {
     });
 
     app.post("/api/buddies", function(req, res) {
+        buddyData.push(req.body);
+        res.json(buddyData);
     });
-    
 };
