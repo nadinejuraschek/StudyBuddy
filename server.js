@@ -17,6 +17,7 @@ const PORT = process.env.PORT || 3000;
 // parse application
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/assets'));
 
 // CUSTOM MODULES
 require('./app/routing/htmlRoutes')(app);
