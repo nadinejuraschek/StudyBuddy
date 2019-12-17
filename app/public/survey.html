@@ -5,8 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva|Lato:400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
-    <h1>SURVEY</h1>
+<body class="site">
+    <div class="site-content container">
+        <h2 class="secondary-heading">Tell Us More About Yourself!</h2>
+        <h4 class="instructions"></h4>
+        <hr>
+        <form action="">
+            <div class="form-group">
+                <label for="name">Name (required)</label><br>
+                <input type="text">
+            </div>
+            <div class="form-group">
+                <label for="name">Profile Picture (required)</label><br>
+                <input type="text">
+            </div>
+        </form>
+        <hr>
+        <form action="">
+            <div class="form-group">
+            <p class="question-heading"><span class="count">1 </span> Question</p>
+            <p class="question"></p>
+            <select class="chosen-select" id="q1">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <p class="question-heading"><span class="count">2 </span> Question</p>
+                <p class="question"></p>
+                <select class="chosen-select" id="q2">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+            <p class="question-heading"><span class="count">3 </span> Question</p>
+            <p class="question"></p>
+            <select class="chosen-select" id="q3">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
