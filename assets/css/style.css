@@ -1,0 +1,63 @@
+body {
+    background-color: #f3f8ff;
+    font-family: "Lato", Arial, sans-serif;
+}
+
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    color: #161e18;
+}
+  
+.site-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 24rem;
+    margin-bottom: 3rem;
+}
+
+.primary-heading,
+    .sub-heading {
+        color: #464646;
+        margin-bottom: 1.5rem;
+}
+
+.primary-heading {
+    font-family: "Mansalva", Arial, sans-serif;
+    font-size: 4.8rem;
+}
+
+.sub-heading {
+    font-size: 1.5rem;
+}
+
+.btn-purple {
+    background-color: #7c80ee;
+    border: none;
+    border-radius: 20rem;
+    box-shadow: 3px 3px 10px #7e7e7e;
+    color: #ffffff;
+    font-weight: 800;
+    margin: 1rem;
+    text-transform: uppercase;
+    width: 20rem;
+}
+
+a {
+    color: #7c80ee;
+}
+
+.divider {
+    color: #7c80ee;
+    margin: 0 1rem;
+}
+
+.copyright {
+    font-size: 0.7rem;
+}

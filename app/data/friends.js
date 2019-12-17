@@ -1,3 +1,4 @@
+[
 {
     "name": "Jason",
     "photo": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -38,3 +39,4 @@
     "photo": "https://images.pexels.com/photos/2078265/pexels-photo-2078265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     "scores": []
 }
+]
