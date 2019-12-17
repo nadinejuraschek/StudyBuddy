@@ -11,60 +11,93 @@
     <link href="https://fonts.googleapis.com/css?family=Mansalva|Lato:400,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body class="site">
-    <div class="site-content container">
-        <h2 class="secondary-heading">Tell Us More About Yourself!</h2>
-        <h4 class="instructions"></h4>
+<body>
+        <div class="container text-center">
+            <h2 class="secondary-heading">Tell Us More About Yourself!</h2>
+            <h4 class="instructions"></h4>
+        </div>
+        
         <hr>
-        <form action="">
-            <div class="form-group">
-                <label for="name">Name (required)</label><br>
-                <input type="text">
-            </div>
-            <div class="form-group">
-                <label for="name">Profile Picture (required)</label><br>
-                <input type="text">
-            </div>
-        </form>
-        <hr>
-        <form action="">
-            <div class="form-group">
-            <p class="question-heading"><span class="count">1 </span> Question</p>
-            <p class="question"></p>
-            <select class="chosen-select" id="q1">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-              </select>
-            </div>
-            <div class="form-group">
-                <p class="question-heading"><span class="count">2 </span> Question</p>
-                <p class="question"></p>
-                <select class="chosen-select" id="q2">
+        
+        <div class="container">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name (required)</label><br>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label for="name">Profile Picture (required)</label><br>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+            </form>
+        </div>
+
+            <hr>
+
+        <div class="container">
+            <form action="">
+                <div class="form-group">
+                <p class="question-heading"><span class="count">1 </span> Question</p>
+                <p class="question">My mind is always buzzing with unexplored ideas and plans.</p>
+                <select class="chosen-select form-control-sm" id="q1">
                     <option value=""></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
-                  </select>
+                </select>
                 </div>
                 <div class="form-group">
-            <p class="question-heading"><span class="count">3 </span> Question</p>
-            <p class="question"></p>
-            <select class="chosen-select" id="q3">
-                <option value=""></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-              </select>
-            </div>
-        </form>
+                    <p class="question-heading"><span class="count">2 </span> Question</p>
+                    <p class="question">I usually complete homework or projects right before they are due.</p>
+                    <select class="chosen-select form-control-sm" id="q2">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                <p class="question-heading"><span class="count">3 </span> Question</p>
+                <p class="question">I like to be organized and prepared for upcoming classes.</p>
+                <select class="chosen-select form-control-sm" id="q3">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                </div>
+                <div class="form-group">
+                    <p class="question-heading"><span class="count">4 </span> Question</p>
+                    <p class="question">I find it easy to stay relaxed and focused even when there is some pressure.</p>
+                    <select class="chosen-select form-control-sm" id="q4">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p class="question-heading"><span class="count">5 </span> Question</p>
+                    <p class="question">In a discussion, I like to listen to other people's ideas and opinions before I share mine.</p>
+                    <select class="chosen-select form-control-sm" id="q5">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
