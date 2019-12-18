@@ -23,11 +23,11 @@
         <form>
             <div class="form-group">
                 <label for="name"><span class="required">*</span> Name</label><br>
-                <input type="text" class="text-input">
+                <input type="text" class="text-input" id="name">
             </div>
             <div class="form-group">
                 <label for="name"><span class="required">*</span> Link to Profile Picture</label><br>
-                <input type="text" class="text-input">
+                <input type="text" class="text-input" id="photo">
             </div>
         </form>
     </div>
@@ -39,7 +39,7 @@
             <div class="form-group">
                 <p class="question-heading"><span class="count">1 </span> Question</p>
                 <p class="question">My mind is always buzzing with unexplored ideas and plans.</p>
-                <select class="form-control" id="q1">
+                <select class="form-control q-answer" id="q1">
                     <option value=""></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -51,7 +51,7 @@
             <div class="form-group">
                 <p class="question-heading"><span class="count">2 </span> Question</p>
                 <p class="question">I usually complete homework or projects right before they are due.</p>
-                <select class="form-control" id="q2">
+                <select class="form-control q-answer" id="q2">
                     <option value=""></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -63,7 +63,7 @@
             <div class="form-group">
                 <p class="question-heading"><span class="count">3 </span> Question</p>
                 <p class="question">I like to be organized and prepared for upcoming classes.</p>
-                <select class="form-control" id="q3">
+                <select class="form-control q-answer" id="q3">
                     <option value=""></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -75,7 +75,7 @@
             <div class="form-group">
                 <p class="question-heading"><span class="count">4 </span> Question</p>
                 <p class="question">I find it easy to stay relaxed and focused even when there is some pressure.</p>
-                <select class="form-control" id="q4">
+                <select class="form-control q-answer" id="q4">
                     <option value=""></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -87,7 +87,7 @@
             <div class="form-group">
                 <p class="question-heading"><span class="count">5 </span> Question</p>
                 <p class="question">In a discussion, I prefer to listen to other people's ideas and opinions before I share mine.</p>
-                <select class="form-control" id="q5">
+                <select class="form-control q-answer" id="q5">
                     <option value=""></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -99,7 +99,7 @@
             <div class="form-group">
                 <p class="question-heading"><span class="count">6 </span> Question</p>
                 <p class="question">I like to study at home.</p>
-                <select class="form-control" id="q6">
+                <select class="form-control q-answer" id="q6">
                     <option value=""></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -111,7 +111,7 @@
             <div class="form-group">
                 <p class="question-heading"><span class="count">7 </span> Question</p>
                 <p class="question">Music or background noise bothers me when learning.</p>
-                <select class="form-control" id="q7">
+                <select class="form-control q-answer" id="q7">
                     <option value=""></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -123,7 +123,7 @@
             <div class="form-group">
                 <p class="question-heading"><span class="count">8 </span> Question</p>
                 <p class="question">I enjoy food and drinks while working on my homework.</p>
-                <select class="form-control" id="q8">
+                <select class="form-control q-answer" id="q8">
                     <option value=""></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -135,7 +135,7 @@
             <div class="form-group">
                 <p class="question-heading"><span class="count">9 </span> Question</p>
                 <p class="question">Taking notes helps me remember study material.</p>
-                <select class="form-control" id="q9">
+                <select class="form-control q-answer" id="q9">
                     <option value=""></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -147,7 +147,7 @@
             <div class="form-group">
                 <p class="question-heading"><span class="count">10 </span> Question</p>
                 <p class="question">I like to practice a lot before moving on to the next topic.</p>
-                <select class="form-control" id="q10">
+                <select class="form-control q-answer" id="q10">
                     <option value=""></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -172,5 +172,76 @@
             <p class="copyright">® 2019</p>
         </footer>
     </div>
+
+    <!-- MODAL-->
+    <div class="modal fade" id="modal-match" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Your Match Is</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-4">
+                        <img id="match-img" alt="Match Profile Picture">
+                    </div>
+                    <div class="col-8">
+                        <h2 id="match-name"></h2>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- JAVASCRIPT, JQUERY -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    // inputs
+    $("#submit-survey").on("click", function(event) {
+      event.preventDefault();
+      console.log("Submit btn has been clicked.");
+
+      // Validation
+      function validate() {
+        var valid = true;
+        $(".form-control").each(function() {
+          if ($(this).val() === "") {
+            valid = false;
+          };
+        });
+        return valid;
+      };
+
+      if (validate()) {
+        var newBuddy = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
+        };
+
+        // push data to API
+        $.post("/api/buddies", newBuddy, function(data) {
+            console.log("Best Match: " + data.name);
+        });
+      } else {
+        alert("All questions must be answered to get matched with a Study Buddy.");
+      };
+    });
+    </script>
 </body>
 </html>
