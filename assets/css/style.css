@@ -41,6 +41,12 @@ img {
     font-size: 1.5rem;
 }
 
+.text-input {
+    border: 1px solid #a0a0a0;
+    border-radius: 20rem;
+    width: 60%;
+}
+
 .count {
     color: #7c80ee;
     font-size: 1.5rem;
@@ -53,20 +59,21 @@ img {
     font-weight: 800;
 }
 
-#1 {
-    
-}
-
 .btn-purple {
     background-color: #7c80ee;
     border: none;
     border-radius: 20rem;
-    box-shadow: 3px 3px 10px #7e7e7e;
+    box-shadow: 3px 3px 3px #a0a0a0;
     color: #ffffff;
     font-weight: 800;
     margin: 1rem;
     text-transform: uppercase;
     width: 20rem;
+}
+
+#submit-survey {
+    width: 100%;
+    margin: 2rem 0 4rem;
 }
 
 a {
