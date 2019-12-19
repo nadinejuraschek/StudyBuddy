@@ -200,6 +200,10 @@
     <!-- JAVASCRIPT, JQUERY -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
+    // newBuddy data
+    var newBuddy;
+    console.log("I'm here on line 205.");
+
     // inputs
     $("#submit-survey").on("click", function(event) {
       event.preventDefault();
@@ -217,7 +221,7 @@
       };
 
       if (validate()) {
-        var newBuddy = {
+        newBuddy = {
           name: $("#name").val(),
           photo: $("#photo").val(),
           scores: [
@@ -234,14 +238,52 @@
           ]
         };
 
+        var bestMatch = newBuddy;
+        console.log("I'm here on line 242!");
+
+        function calcTotalDiff(buddyA, buddyB) {
+            var totalDiff = 0;
+            for (var i=0; i<10; i++) {
+                var diff = Math.abs(buddyA[i] - buddyB[i]);
+                console.log("Diff = " + diff);
+                totalDiff += diff;
+                console.log("Total Diff = " + totalDiff);
+                return totalDiff;
+            }
+        }
+
+        for (var i=0; i<buddyData.length; i++) {
+            var lowestScore = -1;
+            if (buddyData[i].name != newBuddy.name) {
+                var currentScore = calcTotalDiff(buddyData[i].score, newBuddy.score);
+                console.log("Current Score = " + currentScore);
+                if (lowestScore === -1) {
+                    lowestScore = currentScore;
+                    bestMatch = buddyData[i];
+                    console.log("Lowest Score = " + lowestScore);
+                    console.log("Best Match = " + bestMatch);
+                } else {
+                    if (currentScore < lowestScore) {
+                        lowestScore = currentScore;
+                        bestMatch = buddyData[i];
+                        console.log("Lowest Score = " + lowestScore);
+                        console.log("Best Match = " + bestMatch);
+                    }
+                }
+            }
+        }
+
         // push data to API
         $.post("/api/buddies", newBuddy, function(data) {
             console.log("Best Match: " + data.name);
         });
+        // totalDifference
       } else {
         alert("All questions must be answered to get matched with a Study Buddy.");
       };
+
     });
+
     </script>
 </body>
 </html>
