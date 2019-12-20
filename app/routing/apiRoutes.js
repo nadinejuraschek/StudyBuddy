@@ -60,6 +60,6 @@ module.exports = (app) => {
         };
 
         buddyData.push(newBuddy);
-        res.json(buddyData);
+        res.json(bestMatches);
     });
 };

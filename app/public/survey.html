@@ -178,20 +178,13 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">Your Match Is</h5>
+              <h5 class="modal-title" id="exampleModalCenterTitle">Your Match</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-4">
-                        <img id="match-img" alt="Match Profile Picture">
-                    </div>
-                    <div class="col-8">
-                        <h2 id="match-name"></h2>
-                    </div>
-                </div>
+            <div class="modal-body" id="modal-body">
+
             </div>
           </div>
         </div>
@@ -199,6 +192,8 @@
 
     <!-- JAVASCRIPT, JQUERY -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript">
     // new buddy data
     var newBuddy;
@@ -239,14 +234,26 @@
 
         // push data to API
         $.post("/api/buddies", newBuddy, function(data) {
-            console.log("Best Match: " + data.name);
+            // replace modal data with best match data
+            const modalBody = $('#modal-body');
+            for (var i=0; i<data.length; i++) {
+                console.log("loop num: " + i);
+                var matchName = data[i].name;
+                console.log(matchName);
+                var matchPhoto = data[i].photo;
+                console.log(matchPhoto);
+                var matchDiv = $('<div class="match"><h2 id="match-name">' + matchName + '</h2><img id="match-img" src="' + matchPhoto + '" alt="Match Profile Picture"></div>');
+                modalBody.append(matchDiv);
+            };
+
+            // show modal on submit button click
+            $('#modal-match').modal('show');
         });
       } else {
-        alert("All questions must be answered to get matched with a Study Buddy.");
+            alert("All questions must be answered to get matched with a Study Buddy.");
       };
 
     });
-
     </script>
 </body>
 </html>
