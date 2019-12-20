@@ -18,3 +18,4 @@ Bootstrap
 
 ## Heroku Link
 
+https://study-buddy-finder.herokuapp.com/
