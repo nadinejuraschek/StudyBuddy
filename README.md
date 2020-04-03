@@ -14,6 +14,4 @@ The user in search of a study buddy enters his or her name, a link to a profile 
   * express
   * body-parser
 
-Bootstrap
-
-## Heroku Link
+* Bootstrap

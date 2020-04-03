@@ -32,12 +32,17 @@
                 <span class="divider"> | </span>
                 <a href="https://github.com/nadinejuraschek/StudyBuddy">GitHub Repo</a>
             </p>
-            <p class="copyright">® 2019</p>
+            <p class="copyright">© <span id="year"></span> <a href="https://nadinejuraschek.com">Nadine Juraschek</a></p>
         </footer>
     </div>
 
     <!-- JAVASCRIPT, JQUERY -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // current year
+        const currentYear = new Date().getFullYear();
+        $('#year').html(currentYear);
+    </script>
     
 </body>
 </html>
