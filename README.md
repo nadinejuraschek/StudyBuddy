@@ -8,10 +8,32 @@ The user in search of a study buddy enters his or her name, a link to a profile 
 ## Technologies
 * JavaScript
 * jQuery
-
 * Node.js with
   * dotenv
   * express
   * body-parser
-
 * Bootstrap
+
+## Preview
+
+
+## How to Run the App Locally
+1. clone the repository
+```
+git clone git@github.com:nadinejuraschek/StudyBuddy.git
+```
+2. install dependencies
+```
+npm i
+```
+3. create a .env file
+* add a file called ".env" in the repositories folder
+* choose a PORT for the app to run on
+* in the .env file, add
+```
+PORT={your port number here}
+```
+4. start the app
+```
+npm start
+```

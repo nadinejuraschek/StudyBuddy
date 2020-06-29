@@ -22,7 +22,7 @@ var buddyData = [
     {
         "name": "Tracy",
         "photo": "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "scores": [4, 1, 4, 4, 3, 4, 5, 2, 1, 3]
+        "scores": [1, 1, 2, 2, 3, 1, 1, 2, 1, 3]
     },
     {
         "name": "Thomas",
@@ -37,7 +37,7 @@ var buddyData = [
     {
         "name": "Mark",
         "photo": "https://images.pexels.com/photos/2078265/pexels-photo-2078265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "scores": [3, 3, 4, 4, 4, 3, 1, 4, 3, 2]
+        "scores": [5, 4, 5, 4, 4, 5, 4, 4, 5, 5]
     }
 ]
 
